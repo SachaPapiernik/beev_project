@@ -1,0 +1,501 @@
+Make,Model,Year,Price,Engine Type
+Fiat,Tipo,2013,53000,Electric
+Fiat,Tipo,2020,49000,Electric
+Audi,Q5,2022,39000,Thermal
+Vauxhall,Astra,2011,36000,Thermal
+Jaguar,XF,2013,23000,Thermal
+Nissan,Murano,2022,38000,Thermal
+Toyota,Camry,2016,26000,Thermal
+Subaru,Impreza,2012,46000,Electric
+Acura,RDX,2015,58000,Electric
+Tesla,Model X,2015,54000,Thermal
+Subaru,Outback,2017,63000,Electric
+Tesla,Model S,2022,53000,Electric
+Subaru,Forester,2018,80000,Thermal
+Mazda,CX-9,2020,50000,Electric
+Renault,Megane,2022,63000,Electric
+Volkswagen,Atlas,2011,66000,Thermal
+Ford,Explorer,2013,57000,Thermal
+Volkswagen,Golf,2022,30000,Electric
+Hyundai,Santa Fe,2011,36000,Electric
+Acura,TLX,2013,49000,Thermal
+Audi,e-tron,2022,73000,Electric
+BMW,X3,2012,38000,Electric
+Honda,Civic,2017,30000,Electric
+Volvo,S90,2018,28000,Electric
+Porsche,911,2020,40000,Electric
+BMW,3 Series,2018,79000,Thermal
+BMW,5 Series,2016,54000,Thermal
+Ford,F-150,2013,72000,Electric
+Jaguar,F-PACE,2013,68000,Electric
+Mazda,CX-5,2011,66000,Thermal
+Buick,Envision,2013,39000,Electric
+Mercedes-Benz,S-Class,2016,58000,Electric
+Vauxhall,Astra,2019,80000,Electric
+Lexus,ES,2014,68000,Electric
+Honda,Fit,2013,79000,Electric
+Renault,Megane,2018,41000,Electric
+Hyundai,Elantra,2017,50000,Electric
+Kia,Optima,2019,24000,Thermal
+Renault,Clio,2011,38000,Electric
+Volvo,XC90,2010,80000,Thermal
+Lexus,RX,2010,40000,Thermal
+Kia,Soul,2020,71000,Electric
+Subaru,Forester,2016,58000,Electric
+Mazda,CX-5,2021,33000,Thermal
+Subaru,Outback,2020,59000,Thermal
+Jaguar,F-PACE,2022,56000,Thermal
+Subaru,Ascent,2019,53000,Electric
+Fiat,124 Spider,2010,45000,Electric
+Kia,Sportage,2014,49000,Electric
+Peugeot,508,2012,49000,Thermal
+Tesla,Model X,2011,39000,Thermal
+BMW,X3,2014,36000,Electric
+Kia,Sportage,2011,42000,Electric
+Volkswagen,Atlas,2019,60000,Electric
+Volvo,S90,2017,39000,Thermal
+Mercedes-Benz,E-Class,2016,42000,Electric
+Ford,Explorer,2018,62000,Electric
+Buick,Regal,2012,26000,Thermal
+Nissan,Altima,2018,76000,Thermal
+Mazda,Mazda3,2012,61000,Electric
+Jaguar,F-PACE,2020,29000,Electric
+Jaguar,F-PACE,2021,37000,Thermal
+Volvo,XC60,2018,52000,Electric
+Hyundai,Sonata,2014,23000,Thermal
+Tesla,Model 3,2018,72000,Electric
+Peugeot,3008,2011,41000,Electric
+Peugeot,508,2018,36000,Electric
+Jaguar,F-PACE,2016,51000,Electric
+Renault,Megane,2022,24000,Electric
+Lexus,GX,2017,79000,Thermal
+Jaguar,F-PACE,2011,63000,Thermal
+Jaguar,XF,2010,60000,Thermal
+Porsche,Macan,2019,30000,Electric
+BMW,X5,2013,45000,Thermal
+Peugeot,508,2019,58000,Electric
+Acura,TLX,2016,46000,Thermal
+Mercedes-Benz,C-Class,2010,72000,Thermal
+Audi,A4,2020,64000,Thermal
+Tesla,Model 3,2011,69000,Electric
+Peugeot,508,2018,78000,Thermal
+Lexus,RX,2022,53000,Thermal
+Tesla,Model 3,2012,26000,Electric
+Tesla,Model S,2015,63000,Thermal
+Volkswagen,Atlas,2022,27000,Thermal
+Fiat,500X,2020,34000,Thermal
+BMW,X5,2012,33000,Electric
+Renault,Captur,2018,49000,Electric
+BMW,7 Series,2012,63000,Electric
+Vauxhall,Insignia,2018,75000,Thermal
+Buick,Envision,2013,56000,Electric
+Peugeot,308,2016,20000,Electric
+Vauxhall,Corsa,2022,65000,Thermal
+Buick,Regal,2013,78000,Electric
+Vauxhall,Grandland X,2012,60000,Thermal
+Nissan,Rogue,2011,57000,Thermal
+Volvo,S90,2016,65000,Thermal
+Mazda,CX-5,2018,66000,Electric
+Kia,Telluride,2020,66000,Thermal
+Acura,MDX,2013,75000,Thermal
+Chevrolet,Cruze,2016,70000,Electric
+Kia,Telluride,2016,48000,Electric
+Porsche,Macan,2019,63000,Electric
+Nissan,Leaf,2011,20000,Electric
+Porsche,Panamera,2014,70000,Electric
+Volvo,S90,2012,39000,Electric
+Chevrolet,Malibu,2016,26000,Thermal
+Renault,Kadjar,2017,21000,Thermal
+Audi,A6,2012,57000,Electric
+Peugeot,5008,2012,56000,Electric
+Porsche,Panamera,2019,61000,Thermal
+BMW,5 Series,2014,51000,Thermal
+Buick,Enclave,2013,20000,Thermal
+Lexus,ES,2013,49000,Electric
+Mercedes-Benz,GLE,2014,55000,Electric
+Ford,Explorer,2022,53000,Thermal
+Subaru,Forester,2020,29000,Electric
+Hyundai,Tucson,2016,73000,Thermal
+Kia,Telluride,2015,29000,Electric
+Kia,Optima,2021,43000,Thermal
+Nissan,Maxima,2015,71000,Thermal
+Acura,TLX,2010,27000,Electric
+BMW,X5,2014,34000,Thermal
+Fiat,500,2010,34000,Thermal
+Chevrolet,Bolt,2012,62000,Electric
+Buick,Enclave,2012,66000,Thermal
+Renault,Scenic,2017,59000,Thermal
+Toyota,Prius,2012,54000,Electric
+Renault,Kadjar,2011,51000,Thermal
+Peugeot,3008,2012,33000,Electric
+Nissan,Rogue,2021,33000,Electric
+Acura,MDX,2016,63000,Electric
+Kia,Telluride,2011,55000,Electric
+Porsche,Macan,2022,28000,Thermal
+BMW,7 Series,2012,36000,Electric
+Toyota,Highlander,2014,21000,Electric
+BMW,X5,2011,46000,Electric
+Jaguar,XE,2016,38000,Electric
+Lexus,RX,2015,76000,Thermal
+Ford,Fusion,2020,75000,Electric
+Toyota,Prius,2014,62000,Electric
+BMW,X5,2021,30000,Thermal
+BMW,X5,2016,36000,Thermal
+Kia,Soul,2014,34000,Thermal
+Toyota,Corolla,2010,66000,Thermal
+Nissan,Murano,2014,26000,Electric
+Volkswagen,Passat,2022,56000,Thermal
+Subaru,Forester,2022,52000,Electric
+Kia,Forte,2010,20000,Thermal
+Buick,Regal,2013,34000,Thermal
+Buick,Envision,2017,68000,Electric
+Mercedes-Benz,E-Class,2016,59000,Electric
+Mazda,Mazda3,2017,22000,Electric
+Lexus,GX,2017,52000,Electric
+BMW,X5,2016,44000,Thermal
+Toyota,Prius,2010,77000,Electric
+Ford,Fusion,2019,30000,Electric
+BMW,3 Series,2012,62000,Electric
+Toyota,Highlander,2011,22000,Thermal
+Kia,Soul,2022,53000,Electric
+Ford,F-150,2018,29000,Electric
+Mazda,MX-5,2014,23000,Thermal
+Fiat,500,2022,23000,Electric
+Volvo,XC90,2020,77000,Thermal
+Volvo,XC40,2010,30000,Thermal
+Subaru,Ascent,2015,78000,Electric
+Audi,Q5,2015,66000,Thermal
+Peugeot,508,2022,79000,Thermal
+Tesla,Model Y,2021,80000,Electric
+Chevrolet,Bolt,2021,44000,Electric
+Volkswagen,Atlas,2019,76000,Electric
+Chevrolet,Malibu,2016,46000,Electric
+Honda,Civic,2016,69000,Thermal
+Jaguar,XF,2014,72000,Electric
+Fiat,124 Spider,2022,37000,Thermal
+Tesla,Model 3,2019,28000,Thermal
+Acura,MDX,2010,48000,Electric
+BMW,X3,2017,65000,Electric
+Porsche,Macan,2016,40000,Electric
+Tesla,Model 3,2018,74000,Thermal
+Toyota,Prius,2011,26000,Thermal
+Kia,Soul,2015,22000,Electric
+Mazda,MX-5,2013,51000,Electric
+Nissan,Maxima,2011,29000,Electric
+Fiat,500X,2013,51000,Thermal
+Jaguar,XE,2020,69000,Thermal
+Ford,Explorer,2015,62000,Thermal
+Mercedes-Benz,C-Class,2019,62000,Electric
+Tesla,Model X,2015,47000,Electric
+BMW,3 Series,2022,28000,Thermal
+Mazda,Mazda6,2021,31000,Thermal
+Porsche,Taycan,2021,60000,Electric
+Jaguar,F-PACE,2019,49000,Electric
+Renault,Captur,2021,38000,Thermal
+Buick,Encore,2014,52000,Electric
+Mazda,Mazda6,2013,33000,Electric
+Kia,Soul,2022,44000,Electric
+Ford,Mustang,2012,28000,Electric
+Ford,Fusion,2014,35000,Thermal
+Subaru,Ascent,2014,24000,Thermal
+Volvo,S60,2022,77000,Thermal
+Toyota,Camry,2010,36000,Thermal
+Acura,TLX,2020,76000,Electric
+BMW,X3,2015,69000,Thermal
+Chevrolet,Equinox,2015,77000,Electric
+Jaguar,XE,2016,46000,Thermal
+Mercedes-Benz,E-Class,2021,55000,Electric
+Peugeot,308,2016,55000,Electric
+Ford,Escape,2016,75000,Electric
+Buick,Encore,2013,31000,Electric
+Vauxhall,Astra,2014,60000,Electric
+Porsche,911,2020,35000,Thermal
+Vauxhall,Astra,2022,30000,Thermal
+Volvo,S60,2013,42000,Electric
+Audi,Q5,2022,69000,Thermal
+Fiat,Panda,2021,31000,Thermal
+Jaguar,F-PACE,2022,53000,Electric
+Kia,Sportage,2013,25000,Thermal
+Lexus,LS,2014,63000,Electric
+Ford,Fusion,2015,75000,Thermal
+BMW,5 Series,2013,39000,Thermal
+Buick,Encore,2022,76000,Electric
+Audi,Q5,2012,37000,Electric
+Nissan,Altima,2016,29000,Thermal
+Tesla,Model 3,2019,75000,Thermal
+Buick,Enclave,2021,67000,Thermal
+Ford,Fusion,2013,71000,Electric
+Volkswagen,Jetta,2016,79000,Thermal
+Renault,Kadjar,2020,50000,Electric
+Lexus,ES,2020,69000,Electric
+Ford,Escape,2014,26000,Thermal
+Audi,A4,2021,75000,Thermal
+Lexus,RX,2021,36000,Thermal
+Mazda,Mazda3,2010,77000,Electric
+Lexus,ES,2013,51000,Electric
+Peugeot,5008,2010,74000,Thermal
+Vauxhall,Insignia,2019,37000,Electric
+Renault,Captur,2011,45000,Electric
+Mazda,Mazda3,2014,64000,Thermal
+Volkswagen,Jetta,2019,22000,Electric
+Nissan,Maxima,2012,77000,Thermal
+Toyota,Highlander,2017,71000,Thermal
+Mazda,Mazda6,2019,46000,Thermal
+Acura,RDX,2018,34000,Thermal
+Subaru,Legacy,2022,45000,Thermal
+Honda,Pilot,2022,39000,Electric
+Toyota,Rav4,2012,66000,Thermal
+Hyundai,Santa Fe,2010,42000,Thermal
+Buick,Envision,2014,31000,Electric
+Lexus,LS,2014,74000,Electric
+Nissan,Murano,2016,56000,Thermal
+Honda,Fit,2014,80000,Thermal
+Honda,Fit,2019,70000,Electric
+Hyundai,Tucson,2010,50000,Thermal
+Honda,CR-V,2012,48000,Thermal
+Chevrolet,Malibu,2013,30000,Electric
+Toyota,Prius,2014,79000,Thermal
+Mazda,MX-5,2022,29000,Thermal
+Ford,Explorer,2022,39000,Electric
+Kia,Telluride,2019,37000,Thermal
+Acura,TLX,2017,35000,Electric
+Hyundai,Tucson,2014,53000,Electric
+Vauxhall,Crossland X,2015,46000,Thermal
+Lexus,GX,2011,35000,Electric
+Fiat,124 Spider,2016,50000,Electric
+Volkswagen,Passat,2018,37000,Electric
+Lexus,ES,2010,51000,Thermal
+Ford,Fusion,2017,30000,Electric
+Fiat,Panda,2018,57000,Electric
+Honda,CR-V,2019,42000,Electric
+Buick,Encore,2010,51000,Thermal
+Hyundai,Palisade,2015,60000,Thermal
+Audi,A4,2021,34000,Electric
+Buick,Encore,2022,37000,Thermal
+Tesla,Model S,2013,36000,Thermal
+Honda,Pilot,2020,71000,Thermal
+Tesla,Model Y,2011,39000,Thermal
+Hyundai,Elantra,2015,56000,Electric
+Jaguar,I-PACE,2019,53000,Electric
+Tesla,Model Y,2019,57000,Electric
+Mercedes-Benz,GLE,2021,80000,Thermal
+Volkswagen,Jetta,2018,75000,Electric
+Subaru,Legacy,2022,62000,Electric
+Buick,Regal,2012,48000,Thermal
+Ford,F-150,2016,44000,Thermal
+Jaguar,XE,2012,20000,Electric
+Toyota,Corolla,2012,23000,Thermal
+Mercedes-Benz,GLC,2016,57000,Electric
+Volvo,XC40,2011,55000,Thermal
+Buick,Regal,2018,57000,Thermal
+Volkswagen,Passat,2019,25000,Thermal
+Audi,Q7,2012,69000,Electric
+Nissan,Murano,2016,45000,Thermal
+Vauxhall,Insignia,2020,42000,Electric
+Tesla,Model X,2010,61000,Electric
+Vauxhall,Crossland X,2018,68000,Thermal
+Volvo,XC40,2016,58000,Thermal
+Toyota,Rav4,2012,48000,Electric
+Fiat,124 Spider,2011,66000,Electric
+Ford,Fusion,2012,20000,Thermal
+Kia,Forte,2013,54000,Electric
+Chevrolet,Bolt,2022,41000,Electric
+Mazda,Mazda6,2013,63000,Electric
+Audi,A6,2013,32000,Thermal
+Mercedes-Benz,C-Class,2021,52000,Electric
+Toyota,Highlander,2013,28000,Thermal
+Ford,F-150,2012,20000,Thermal
+Renault,Captur,2021,58000,Electric
+Acura,RLX,2017,23000,Thermal
+Hyundai,Santa Fe,2011,48000,Thermal
+Mercedes-Benz,C-Class,2010,64000,Electric
+Subaru,Impreza,2013,53000,Electric
+Tesla,Model X,2021,30000,Thermal
+Volkswagen,Jetta,2022,40000,Thermal
+Audi,e-tron,2018,47000,Thermal
+Toyota,Corolla,2022,69000,Thermal
+Ford,Escape,2021,41000,Electric
+Fiat,Tipo,2010,26000,Thermal
+Toyota,Prius,2016,36000,Electric
+Fiat,Tipo,2011,71000,Thermal
+Fiat,124 Spider,2015,68000,Electric
+Tesla,Model Y,2011,61000,Electric
+Toyota,Prius,2010,71000,Electric
+Lexus,GX,2017,77000,Thermal
+Ford,Explorer,2020,33000,Electric
+Chevrolet,Traverse,2017,35000,Electric
+BMW,7 Series,2013,34000,Thermal
+Nissan,Rogue,2010,29000,Thermal
+Chevrolet,Traverse,2019,48000,Electric
+Tesla,Model X,2010,70000,Thermal
+Acura,RLX,2017,49000,Thermal
+Ford,F-150,2016,38000,Electric
+Nissan,Murano,2020,39000,Electric
+Peugeot,508,2013,55000,Thermal
+Nissan,Murano,2014,67000,Thermal
+Lexus,NX,2014,70000,Electric
+Kia,Soul,2014,78000,Thermal
+BMW,3 Series,2021,72000,Electric
+Chevrolet,Equinox,2022,63000,Thermal
+Hyundai,Sonata,2012,73000,Electric
+Mercedes-Benz,C-Class,2012,44000,Thermal
+Audi,A4,2016,55000,Electric
+Buick,Encore,2019,52000,Electric
+Chevrolet,Bolt,2022,70000,Thermal
+Lexus,ES,2021,25000,Electric
+Ford,Explorer,2018,79000,Electric
+Vauxhall,Astra,2010,38000,Thermal
+Porsche,Macan,2020,39000,Thermal
+Chevrolet,Equinox,2016,44000,Thermal
+Vauxhall,Crossland X,2013,29000,Electric
+Volvo,S60,2011,78000,Thermal
+Acura,TLX,2013,22000,Thermal
+Mercedes-Benz,S-Class,2013,80000,Electric
+Volvo,XC90,2022,32000,Electric
+Jaguar,F-PACE,2020,24000,Electric
+Mercedes-Benz,E-Class,2010,25000,Thermal
+Peugeot,308,2021,72000,Thermal
+Jaguar,XE,2020,78000,Thermal
+Porsche,Panamera,2015,72000,Thermal
+BMW,7 Series,2014,67000,Thermal
+Peugeot,508,2019,54000,Thermal
+Mazda,MX-5,2020,43000,Thermal
+Mazda,Mazda6,2015,33000,Thermal
+Jaguar,F-PACE,2010,76000,Electric
+Mazda,Mazda6,2020,78000,Electric
+Volkswagen,Tiguan,2017,56000,Electric
+Ford,Fusion,2011,23000,Electric
+Vauxhall,Astra,2013,68000,Thermal
+Acura,RDX,2011,49000,Thermal
+BMW,X5,2010,79000,Thermal
+Lexus,LS,2021,43000,Electric
+Lexus,RX,2014,23000,Thermal
+Honda,Pilot,2015,29000,Thermal
+Fiat,500X,2016,71000,Thermal
+Volvo,XC40,2014,54000,Thermal
+Kia,Sportage,2011,46000,Thermal
+Fiat,Panda,2020,66000,Electric
+Lexus,LS,2021,66000,Electric
+Chevrolet,Equinox,2015,44000,Electric
+Hyundai,Elantra,2010,43000,Electric
+Tesla,Model Y,2018,72000,Thermal
+Renault,Captur,2011,73000,Thermal
+Vauxhall,Crossland X,2011,32000,Electric
+Porsche,Taycan,2012,64000,Thermal
+Mazda,MX-5,2012,53000,Thermal
+Fiat,124 Spider,2013,77000,Thermal
+Audi,A6,2021,60000,Thermal
+Buick,Enclave,2017,73000,Thermal
+Toyota,Corolla,2017,36000,Electric
+Volvo,XC90,2016,78000,Electric
+Peugeot,5008,2020,71000,Electric
+Porsche,Panamera,2015,43000,Electric
+Acura,MDX,2022,71000,Thermal
+Volvo,XC40,2019,39000,Thermal
+Nissan,Leaf,2012,23000,Electric
+Tesla,Model Y,2020,58000,Thermal
+Porsche,Macan,2012,54000,Thermal
+Jaguar,I-PACE,2014,68000,Electric
+Mazda,CX-9,2020,54000,Electric
+Peugeot,308,2011,42000,Thermal
+Lexus,LS,2012,70000,Thermal
+Vauxhall,Corsa,2020,65000,Electric
+Renault,Clio,2011,25000,Thermal
+Nissan,Maxima,2016,66000,Thermal
+Mazda,CX-5,2012,63000,Thermal
+Honda,CR-V,2011,45000,Thermal
+Honda,CR-V,2017,58000,Electric
+Subaru,Forester,2013,58000,Thermal
+Volvo,S90,2022,30000,Electric
+Honda,CR-V,2013,68000,Thermal
+Renault,Scenic,2015,39000,Electric
+Jaguar,I-PACE,2012,68000,Thermal
+Porsche,Taycan,2012,25000,Electric
+Honda,CR-V,2017,45000,Electric
+Hyundai,Tucson,2015,52000,Electric
+BMW,5 Series,2012,35000,Thermal
+Buick,Envision,2021,21000,Electric
+Kia,Optima,2020,27000,Thermal
+Volkswagen,Passat,2010,61000,Electric
+Hyundai,Sonata,2015,69000,Electric
+Acura,TLX,2017,62000,Thermal
+Vauxhall,Crossland X,2017,35000,Thermal
+Toyota,Camry,2011,28000,Electric
+Renault,Megane,2012,49000,Thermal
+Vauxhall,Grandland X,2016,37000,Thermal
+Volvo,XC60,2018,72000,Thermal
+Mercedes-Benz,GLE,2013,78000,Electric
+Fiat,124 Spider,2014,79000,Thermal
+Audi,Q7,2021,20000,Electric
+Audi,A6,2021,70000,Electric
+Mazda,CX-9,2010,56000,Electric
+Mercedes-Benz,GLC,2012,42000,Thermal
+Tesla,Model X,2021,36000,Thermal
+Kia,Sportage,2018,39000,Thermal
+Mercedes-Benz,GLC,2020,21000,Thermal
+Toyota,Prius,2015,48000,Electric
+Renault,Kadjar,2014,41000,Electric
+Jaguar,F-PACE,2022,34000,Electric
+Honda,Fit,2010,55000,Thermal
+Ford,F-150,2014,76000,Electric
+Chevrolet,Equinox,2016,74000,Thermal
+Buick,Enclave,2010,47000,Thermal
+Honda,Civic,2018,44000,Thermal
+Subaru,Outback,2011,80000,Electric
+Audi,A4,2014,23000,Electric
+Volkswagen,Passat,2021,23000,Electric
+Mazda,Mazda6,2019,43000,Electric
+Tesla,Model S,2017,74000,Electric
+Mazda,CX-5,2020,63000,Thermal
+Chevrolet,Bolt,2020,34000,Electric
+Volvo,XC90,2013,52000,Thermal
+Buick,Encore,2020,67000,Electric
+Mercedes-Benz,GLE,2022,78000,Thermal
+Lexus,RX,2018,52000,Electric
+Audi,Q7,2018,61000,Thermal
+Tesla,Model X,2013,35000,Thermal
+Peugeot,508,2015,39000,Electric
+Acura,RLX,2020,27000,Electric
+Nissan,Leaf,2019,26000,Electric
+Volkswagen,Golf,2013,61000,Electric
+Fiat,500X,2017,26000,Thermal
+Subaru,Ascent,2020,63000,Electric
+Chevrolet,Equinox,2022,71000,Electric
+Lexus,NX,2020,49000,Thermal
+Mazda,CX-5,2020,48000,Electric
+Buick,Encore,2015,55000,Thermal
+Lexus,RX,2022,30000,Thermal
+Jaguar,F-PACE,2022,70000,Thermal
+Nissan,Leaf,2022,27000,Thermal
+Subaru,Impreza,2015,28000,Thermal
+Mazda,Mazda6,2010,74000,Thermal
+Honda,Pilot,2011,61000,Thermal
+Peugeot,508,2016,78000,Electric
+Kia,Telluride,2010,54000,Electric
+Vauxhall,Corsa,2016,74000,Thermal
+Vauxhall,Astra,2021,48000,Thermal
+Vauxhall,Grandland X,2012,68000,Thermal
+Lexus,RX,2022,26000,Electric
+Buick,Regal,2017,46000,Thermal
+Buick,Encore,2010,49000,Thermal
+Acura,MDX,2020,55000,Thermal
+Hyundai,Santa Fe,2018,59000,Electric
+Jaguar,XF,2017,22000,Electric
+Vauxhall,Insignia,2017,60000,Electric
+BMW,X3,2019,51000,Thermal
+Porsche,911,2021,49000,Thermal
+Renault,Clio,2012,29000,Thermal
+Audi,A6,2011,43000,Electric
+Nissan,Maxima,2018,61000,Thermal
+Porsche,911,2016,48000,Electric
+Toyota,Rav4,2012,29000,Thermal
+Mazda,CX-5,2018,64000,Thermal
+Lexus,GX,2021,56000,Electric
+Peugeot,5008,2018,72000,Electric
+Ford,F-150,2012,77000,Thermal
+Lexus,RX,2011,52000,Thermal
+Volkswagen,Tiguan,2014,25000,Electric
+Ford,Mustang,2010,35000,Electric
+Hyundai,Palisade,2018,35000,Electric
+Kia,Soul,2016,52000,Thermal
+Lexus,NX,2011,66000,Thermal
