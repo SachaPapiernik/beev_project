@@ -1,5 +1,5 @@
 import os
-from sqlalchemy import MetaData, Table, Column, Integer, String, Float, create_engine
+from sqlalchemy import MetaData, Table, Column, Integer, String, Float, create_engine, exc
 from dotenv import load_dotenv
 import pandas as pd
 import seaborn as sns
@@ -85,17 +85,14 @@ def create_table(engine) -> None:
                                 )
 
     try:
-
         # Create both table via the create method of the table object 
         consumer_data_table.create(engine)
-        car_data_table.create(engine)
-    except Exception as e:
+        car_data_table.create(engine) 
+    except exc.SQLAlchemyError as e:
         if "already exists" in str(e):
             print("Table already exists.")
         else:
-            print(f"Error: {e}")
-    else:
-        print('Tables created')
+            raise e
 
 def build_engine() -> None:
     """Builds and returns a SQLAlchemy engine for connecting to a PostgreSQL database.

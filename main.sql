@@ -1,4 +1,4 @@
--- Querry 1  : We want to find the total number of cars by model by country.
+-- Query 1  : We want to find the total number of cars by model by country.
 
 SELECT
     "Country",
@@ -10,7 +10,7 @@ FROM
 GROUP BY
     "Country", "Make","Model";
 
--- Querry B : We want to know which country has the most of each model
+-- Query B : We want to know which country has the most of each model
 
 WITH SALES_VOLUME AS (
   SELECT consumer_data."Country", consumer_data."Make", consumer_data."Model", sum(consumer_data."Sales_Volume") as SV
@@ -28,22 +28,22 @@ SELECT *
 FROM ROW_NUMBER_SALES_VOLUME
 WHERE "row_number" = 1
 
--- Querry C : We want to know if any model is sold in the USA but not in France.
+-- Query C : We want to know if any model is sold in the USA but not in France.
 
 SELECT DISTINCT
-       consumer_data."Model",
-       consumer_data."Make"
-FROM consumer_data
-WHERE consumer_data."Country" = 'USA'
+       us_data."Model",
+       us_data."Make"
+FROM consumer_data as us_data
+WHERE us_data."Country" = 'USA'
   AND NOT EXISTS (
     SELECT 1
-    FROM consumer_data france_data
+    FROM consumer_data as france_data
     WHERE france_data."Country" = 'France'
-      AND consumer_data."Model" = france_data."Model"
-      AND consumer_data."Make" = france_data."Make"
+      AND us_data."Model" = france_data."Model"
+      AND us_data."Make" = france_data."Make"
 );
 
--- Querry D :  We want to know how much the average car costs in every country by engine type
+-- Query D :  We want to know how much the average car costs in every country by engine type
 
 SELECT consumer_data."Country", car_data."Engine_Type", AVG(car_data."Price")
 FROM car_data
@@ -53,7 +53,7 @@ GROUP BY
 	car_data."Engine_Type",
 	consumer_data."Country"
 
--- Querry E : We want to know the average ratings of electric cars vsthermal cars
+-- Query E : We want to know the average ratings of electric cars vs thermal cars
 
 SELECT car_data."Engine_Type", AVG(consumer_data."Review_Score") AS avg_review_score
 FROM car_data

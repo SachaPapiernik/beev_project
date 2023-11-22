@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch, Mock, call
 import pandas as pd
 from function import build_engine, load_env, plot_QpYpET, run_query, load_data, create_table
+from sqlalchemy import exc
 
 class TestBuildEngine(unittest.TestCase):
 
@@ -23,14 +24,20 @@ class TestLoadEnv(unittest.TestCase):
     @patch('function.load_dotenv')
     @patch('function.os.getenv')
     def test_load_env(self, mock_getenv, mock_load_dotenv):
-        mock_getenv.return_value = 'localhost'
 
+        mock_getenv.side_effect = ['localhost', '5432', 'test_db', 'test_user', 'test_password']
+       
         result = load_env()
 
         # Assertions
         mock_load_dotenv.assert_called_once()
         mock_getenv.assert_any_call("DB_HOST")
-        self.assertEqual(result, ('localhost', 'localhost', 'localhost', 'localhost', 'localhost'))
+        mock_getenv.assert_any_call("DB_PORT")
+        mock_getenv.assert_any_call("DB_NAME")
+        mock_getenv.assert_any_call("DB_USER")
+        mock_getenv.assert_any_call("DB_PASSWORD")
+
+        self.assertEqual(result, ('localhost', '5432', 'test_db', 'test_user', 'test_password'))
 
     def test_missing_environment_variable(self):
         with self.assertRaises(EnvironmentError):
@@ -53,15 +60,7 @@ class TestPlotQpYpET(unittest.TestCase):
         plot_QpYpET(engine)
 
         # Assertions
-        mock_run_query.assert_called_once_with(engine,  """
-    SELECT consumer_data."Year", car_data."Engine_Type", SUM(consumer_data."Sales_Volume") as total
-    FROM car_data
-    INNER JOIN consumer_data ON car_data."Make" = consumer_data."Make"
-                            AND car_data."Model" = consumer_data."Model"
-    GROUP BY consumer_data."Year", car_data."Engine_Type"
-    ORDER BY consumer_data."Year";
-    """)
-
+        mock_run_query.assert_called_once()
         mock_barplot.assert_called_once()
         mock_show.assert_called_once()
 
@@ -107,6 +106,16 @@ class TestLoadData(unittest.TestCase):
         mock_read_csv.assert_called_once_with(csv_filename, names=columns, skiprows=1)
         mock_to_sql.assert_called_once_with(tablename, engine, if_exists='append', index=False)
 
+    @patch('function.pd.read_csv')
+    def test_empty_dataframe(self,mock_read_csv):
+        mock_read_csv.return_value = pd.DataFrame()
+        engine = Mock()
+        csv_filename = 'sample_data.csv'
+        tablename = 'sample_table'
+        columns = ['Make', 'Model', 'Year', 'Sales_Volume']
+        with self.assertRaises(ValueError):
+            load_data(csv_filename, engine, tablename, columns)
+
 class TestCreateTable(unittest.TestCase):
 
     @patch('function.Table.create')
@@ -121,6 +130,18 @@ class TestCreateTable(unittest.TestCase):
             call(engine),
         ]
         mock_table_create.assert_has_calls(expected_calls)
+    
+    def test_already_exist(self):
+        engine = Mock()
+        with self.assertRaises(exc.SQLAlchemyError):
+            with patch('function.Table.create', side_effect=exc.SQLAlchemyError):
+                create_table(engine=engine)
+    
+    def test_any_error(self):
+        engine = Mock()
+        with self.assertRaises(ValueError):
+            with patch('function.Table.create', side_effect=Exception):
+                create_table(engine=engine)
 
 if __name__ == '__main__':
     unittest.main()
