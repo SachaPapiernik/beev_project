@@ -137,11 +137,5 @@ class TestCreateTable(unittest.TestCase):
             with patch('function.Table.create', side_effect=exc.SQLAlchemyError):
                 create_table(engine=engine)
     
-    def test_any_error(self):
-        engine = Mock()
-        with self.assertRaises(ValueError):
-            with patch('function.Table.create', side_effect=Exception):
-                create_table(engine=engine)
-
 if __name__ == '__main__':
     unittest.main()

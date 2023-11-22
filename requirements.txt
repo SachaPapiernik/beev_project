@@ -1,0 +1,5 @@
+pandas
+seaborn
+python-dotenv
+SQLAlchemy
+psycopg2
