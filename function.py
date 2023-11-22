@@ -29,7 +29,7 @@ def load_env() -> tuple:
 
     return db_host, db_port, db_name, db_user, db_password
 
-def create_table() -> None:
+def create_table(engine) -> None:
     """
     Creates two tables, 'car_data' and 'consumer_data', in a PostgreSQL database.
 
@@ -60,9 +60,6 @@ def create_table() -> None:
     Returns:
     None
     """
-
-    # Load credential and create the engine
-    engine = build_engine()
 
     metadata = MetaData()
 
@@ -116,9 +113,9 @@ def build_engine() -> None:
     engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
     return engine
 
-def load_data() -> None:
+def load_data(csv_filename, engine, tablename, columns) -> None:
     """
-    Load car and consumer data from CSV files into a SQL database.
+    Load CSV data from CSV file into a tablename in SQL database.
 
     Raises:
         ValueError: If the 'car_data.csv' or 'consumer_data.csv' file is empty.
@@ -126,33 +123,17 @@ def load_data() -> None:
         FileNotFoundError: If there is an issue locating the CSV files.
         Exception: If an unexpected error occurs during the data loading process.
     """
-    try:
-        # Load car data
-        df_car_data = pd.read_csv('car_data.csv',names=["Make",'Model','Year','Price','Engine_Type'])
-        if df_car_data.empty:
-            raise ValueError("The 'car_data.csv' file is empty.")
+    # Load CSV data
+    df_data = pd.read_csv(csv_filename, names=columns, skiprows=1)
+    if df_data.empty:
+        raise ValueError(f"The '{csv_filename}' file is empty.")
+    
+    # Write data to SQL tables
+    df_data.to_sql(tablename, engine, if_exists='append', index=False)
 
-        # Load consumer data
-        df_consumer_data = pd.read_csv('consumer_data.csv', skiprows=1,names=['Country', 'Make', 'Model', 'Year', 'Review_Score', 'Sales_Volume'])
-        if df_consumer_data.empty:
-            raise ValueError("The 'consumer_data.csv' file is empty.")
+    print(f"Data '{csv_filename}' loaded succesfully into the base {tablename}")
 
-        # Build SQLAlchemy engine
-        engine = build_engine()
-
-        # Write data to SQL tables
-        df_car_data.to_sql('car_data', engine, if_exists='append', index=False)
-        df_consumer_data.to_sql('consumer_data', engine, if_exists='append', index=False)
-
-    except FileNotFoundError as e:
-        raise FileNotFoundError(f"Error loading data: {e}")
-
-    except Exception as e:
-        raise Exception(f"An error occurred while loading data: {e}")
-
-    print("Data loaded succesfully into the base")
-
-def run_query(sql_query:str) -> pd.DataFrame:
+def run_query(engine, sql_query:str) -> pd.DataFrame:
     """Executes a SQL query on a PostgreSQL database and returns the result as a Pandas DataFrame.
 
     Args:
@@ -164,11 +145,10 @@ def run_query(sql_query:str) -> pd.DataFrame:
     Raises:
         Any exceptions raised during the process of building the database engine or executing the query.
     """
-    engine = build_engine()
     result_df = pd.read_sql_query(sql_query, engine)
     return result_df
 
-def plot_QpYpET() -> None:
+def plot_QpYpET(engine) -> None:
     """Generates a bar plot showing the quantity sold per year and engine type.
 
     This function retrieves relevant data from a PostgreSQL database using the `run_query` function
@@ -193,7 +173,7 @@ def plot_QpYpET() -> None:
     ORDER BY consumer_data."Year";
     """
 
-    df = run_query(sql_query)
+    df = run_query(engine, sql_query)
 
     plt.figure(figsize=(10, 10))
     sns.barplot(x='Year', y='total', hue='Engine_Type', data=df)
