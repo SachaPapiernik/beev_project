@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, Mock
-from function import build_engine, load_env, plot_QpYpET  # Replace 'your_module' with the actual module name
 import pandas as pd
+from function import build_engine, load_env, plot_QpYpET
 
 class TestBuildEngine(unittest.TestCase):
 
@@ -43,7 +43,6 @@ class TestPlotQpYpET(unittest.TestCase):
     @patch('function.sns.barplot')
     @patch('function.plt.show')
     def test_plot_QpYpET(self, mock_show, mock_barplot, mock_run_query):
-
         mock_run_query.return_value = pd.DataFrame({
             'Year': [2021, 2021, 2022, 2022],
             'Engine_Type': ['Gas', 'Electric', 'Gas', 'Electric'],
