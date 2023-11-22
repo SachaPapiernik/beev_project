@@ -1,7 +1,7 @@
 import unittest
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, call
 import pandas as pd
-from function import build_engine, load_env, plot_QpYpET
+from function import build_engine, load_env, plot_QpYpET, run_query, load_data, create_table
 
 class TestBuildEngine(unittest.TestCase):
 
@@ -64,6 +64,63 @@ class TestPlotQpYpET(unittest.TestCase):
 
         mock_barplot.assert_called_once()
         mock_show.assert_called_once()
+
+class TestRunQuery(unittest.TestCase):
+
+    @patch('function.pd.read_sql_query')
+    def test_run_query(self, mock_read_sql_query):
+       
+        expected_result = pd.DataFrame({
+            'Year': [2021, 2021, 2022, 2022],
+            'Engine_Type': ['Gas', 'Electric', 'Gas', 'Electric'],
+            'total': [100, 50, 120, 60]
+        })
+        mock_read_sql_query.return_value = expected_result
+
+        engine = Mock()
+        sql_query = "SELECT * FROM some_table"
+        result_df = run_query(engine, sql_query)
+
+        # Assertions
+        mock_read_sql_query.assert_called_once_with(sql_query, engine)
+        pd.testing.assert_frame_equal(result_df, expected_result)
+
+class TestLoadData(unittest.TestCase):
+
+    @patch('function.pd.read_csv')
+    @patch('function.pd.DataFrame.to_sql')
+    def test_load_data(self, mock_to_sql, mock_read_csv):
+        mock_read_csv.return_value = pd.DataFrame({
+            'Make': ['Toyota', 'Honda'],
+            'Model': ['Camry', 'Civic'],
+            'Year': [2021, 2022],
+            'Sales_Volume': [100, 150]
+        })
+
+        engine = Mock()
+        csv_filename = 'sample_data.csv'
+        tablename = 'sample_table'
+        columns = ['Make', 'Model', 'Year', 'Sales_Volume']
+        load_data(csv_filename, engine, tablename, columns)
+
+        # Assertions
+        mock_read_csv.assert_called_once_with(csv_filename, names=columns, skiprows=1)
+        mock_to_sql.assert_called_once_with(tablename, engine, if_exists='append', index=False)
+
+class TestCreateTable(unittest.TestCase):
+
+    @patch('function.Table.create')
+    def test_create_table(self, mock_table_create):
+
+        engine = Mock()
+        create_table(engine)
+
+        # Assertions
+        expected_calls = [
+            call(engine),
+            call(engine),
+        ]
+        mock_table_create.assert_has_calls(expected_calls)
 
 if __name__ == '__main__':
     unittest.main()
