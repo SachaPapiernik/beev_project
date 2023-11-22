@@ -12,17 +12,21 @@ GROUP BY
 
 -- Querry B : We want to know which country has the most of each model
 
-SELECT
-	DISTINCT consumer_data."Model",
-	consumer_data."Make",
-	consumer_data."Country",
-	sum(consumer_data."Sales_Volume") as total_sale
-	
-FROM consumer_data
-GROUP BY 
-	consumer_data."Country",
-	consumer_data."Model",
-	consumer_data."Make"
+WITH SALES_VOLUME AS (
+  SELECT consumer_data."Country", consumer_data."Make", consumer_data."Model", sum(consumer_data."Sales_Volume") as SV
+  FROM consumer_data
+  GROUP BY "Country", "Make", "Model"
+  ORDER BY "Make", "Model", SV DESC
+),
+ROW_NUMBER_SALES_VOLUME AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER(PARTITION BY "Make", "Model" ORDER BY SV DESC) AS row_number
+  FROM SALES_VOLUME
+)
+SELECT *
+FROM ROW_NUMBER_SALES_VOLUME
+WHERE "row_number" = 1
 
 -- Querry C : We want to know if any model is sold in the USA but not in France.
 
