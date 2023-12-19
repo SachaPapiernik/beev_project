@@ -9,7 +9,7 @@ def load_env() -> tuple:
     """Load environment variables for database connection.
 
     Returns:
-        tuple: A tuple containing the database host, port, name, user, and password.
+        tuple: A tuple containing the database host, port, name, user, and passwords.
 
     Raises:
         EnvironmentError: If any of the required environment variables are not set.
